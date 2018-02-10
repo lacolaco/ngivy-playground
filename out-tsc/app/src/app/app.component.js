@@ -19,6 +19,7 @@ AppComponent.decorators = [
 /** @nocollapse */
 AppComponent.ctorParameters = () => [];
 AppComponent.ngComponentDef = i0.ɵdefineComponent({
+  type: AppComponent,
   tag: 'app-root',
   factory: function AppComponent_Factory() {
     return new AppComponent();
