@@ -5,18 +5,17 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --aot",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngc": "ngc -p src/tsconfig.app.json"
+    "ngc": "rm -rf out-tsc && ngc -p src/tsconfig.app.json"
   },
   "private": true,
   "dependencies": {
     "@angular/common": "angular/common-builds",
     "@angular/compiler": "angular/compiler-builds",
     "@angular/core": "angular/core-builds",
-    "@angular/forms": "angular/forms-builds",
     "@angular/platform-browser": "angular/platform-browser-builds",
     "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds",
     "core-js": "^2.4.1",
@@ -27,6 +26,6 @@
     "@angular/cli": "^6.0.0-beta.4",
     "@angular/compiler-cli": "angular/compiler-cli-builds",
     "@angular/language-service": "angular/language-service-builds",
-    "typescript": "~2.5.3"
+    "typescript": "~2.7.0"
   }
 }

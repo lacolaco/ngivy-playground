@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GreetingComponent
   ],
   imports: [
   ],

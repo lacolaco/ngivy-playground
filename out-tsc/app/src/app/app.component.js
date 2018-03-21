@@ -1,21 +1,8 @@
 import { Component } from '@angular/core';
 import * as i0 from '@angular/core';
-export class AppComponent {
-  constructor() {
-    this.greeting = 'World';
-  }
-}
-AppComponent.decorators = [
-  {
-    type: Component,
-    args: [
-      {
-        selector: 'app-root',
-        template: 'Hello {{greeting}}!'
-      }
-    ]
-  }
-];
+import * as i1 from './greeting/greeting.component';
+var _c0 = ['name', 'World'];
+export class AppComponent {}
 /** @nocollapse */
 AppComponent.ctorParameters = () => [];
 AppComponent.ngComponentDef = i0.ɵdefineComponent({
@@ -26,9 +13,12 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
   },
   template: function AppComponent_Template(ctx, cm) {
     if (cm) {
-      i0.ɵT(0);
+      i0.ɵE(0, i1.GreetingComponent, _c0);
+      i0.ɵe();
     }
-    i0.ɵt(0, i0.ɵb1('Hello ', ctx.greeting, '!'));
+    i0.ɵp(0, 'name', i0.ɵb('World'));
+    i1.GreetingComponent.ngComponentDef.h(1, 0);
+    i0.ɵr(1, 0);
   }
 });
 //# sourceMappingURL=app.component.js.map
