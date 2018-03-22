@@ -118,8 +118,8 @@
     tslib "^1.9.0"
 
 "@angular/compiler-cli@angular/compiler-cli-builds":
-  version "6.0.0-rc.0-7cd8e8d"
-  resolved "https://codeload.github.com/angular/compiler-cli-builds/tar.gz/a62018de908b0cc3c02109c350750a5d26213dd3"
+  version "6.0.0-rc.0-f461f43"
+  resolved "https://codeload.github.com/angular/compiler-cli-builds/tar.gz/3890403adbda72cf241cb017185fabcb4b1493df"
   dependencies:
     chokidar "^1.4.2"
     minimist "^1.2.0"
@@ -139,8 +139,8 @@
     tslib "^1.9.0"
 
 "@angular/language-service@angular/language-service-builds":
-  version "6.0.0-rc.0-7cd8e8d"
-  resolved "https://codeload.github.com/angular/language-service-builds/tar.gz/02d71745b836eaa2809863453fb4c1aeef6423c3"
+  version "6.0.0-rc.0-f461f43"
+  resolved "https://codeload.github.com/angular/language-service-builds/tar.gz/77b649f492f309c87733f6af14aa3538d88fb447"
 
 "@angular/platform-browser-dynamic@angular/platform-browser-dynamic-builds":
   version "6.0.0-rc.0-7cd8e8d"
@@ -4625,13 +4625,13 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript@2.7, typescript@~2.7.2:
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
-
 typescript@~2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
+
+typescript@~2.7.0, typescript@~2.7.2:
+  version "2.7.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.2.tgz#2d615a1ef4aee4f574425cdff7026edf81919836"
 
 uglify-es@^3.3.4:
   version "3.3.9"
