@@ -5,8 +5,6 @@ import * as i0 from '@angular/core';
 const ɵ0 = [],
   ɵ1 = [];
 export class AppModule {}
-/** @nocollapse */
-AppModule.ctorParameters = () => [];
 AppModule.ngInjectorDef = i0.defineInjector({
   factory: function AppModule_Factory() {
     return new AppModule();

@@ -1,11 +1,22 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  OnDestroy,
+  EventEmitter
+} from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-greeting',
-  template: `Hello {{name}}!`
+  template: `Hello {{greetingName}}!`
 })
-export class GreetingComponent {
-  @Input() name: string;
+export class GreetingComponent implements OnChanges, OnDestroy {
+  @Input('name') greetingName: string;
 
   foo() {}
+
+  ngOnDestroy() {}
+
+  ngOnChanges(changes) {}
 }

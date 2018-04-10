@@ -2,15 +2,16 @@ import { Component, Input } from '@angular/core';
 import * as i0 from '@angular/core';
 export class GreetingComponent {
   foo() {}
+  ngOnDestroy() {}
+  ngOnChanges(changes) {}
 }
 /** @nocollapse */
-GreetingComponent.ctorParameters = () => [];
 GreetingComponent.propDecorators = {
-  name: [{ type: Input }]
+  greetingName: [{ type: Input, args: ['name'] }]
 };
 GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
   type: GreetingComponent,
-  tag: 'app-greeting',
+  selectors: [['app-greeting']],
   factory: function GreetingComponent_Factory() {
     return new GreetingComponent();
   },
@@ -18,8 +19,9 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
     if (cm) {
       i0.ɵT(0);
     }
-    i0.ɵt(0, i0.ɵi1('Hello ', ctx.name, '!'));
+    i0.ɵt(0, i0.ɵi1('Hello ', ctx.greetingName, '!'));
   },
-  inputs: { name: 'name' }
+  inputs: { greetingName: 'name' },
+  features: [i0.ɵNgOnChangesFeature(GreetingComponent)]
 });
 //# sourceMappingURL=greeting.component.js.map
