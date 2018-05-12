@@ -19,14 +19,14 @@
     "@angular/platform-browser": "angular/platform-browser-builds",
     "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds",
     "core-js": "^2.4.1",
-    "rxjs": "5.6.0-forward-compat.2",
-    "zone.js": "^0.8.19"
+    "rxjs": "^6.0.0",
+    "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular/cli": "^6.0.0-rc.2",
+    "@angular/cli": "^6.0.0",
     "@angular/compiler-cli": "angular/compiler-cli-builds",
     "@angular/language-service": "angular/language-service-builds",
     "typescript": "~2.7.0",
-    "@angular-devkit/build-angular": "~0.5.0"
+    "@angular-devkit/build-angular": "~0.6.0"
   }
 }

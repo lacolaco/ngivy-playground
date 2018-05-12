@@ -15,6 +15,7 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
   factory: function GreetingComponent_Factory() {
     return new GreetingComponent();
   },
+  inputs: { greetingName: 'name' },
   template: function GreetingComponent_Template(rf, ctx) {
     if (rf & 1) {
       i0.ɵT(0);
@@ -23,7 +24,6 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
       i0.ɵt(0, i0.ɵi1('Hello ', ctx.greetingName, '!'));
     }
   },
-  inputs: { greetingName: 'name' },
   features: [i0.ɵNgOnChangesFeature(GreetingComponent)]
 });
 //# sourceMappingURL=greeting.component.js.map
