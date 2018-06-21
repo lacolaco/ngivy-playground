@@ -5,7 +5,6 @@ export class GreetingComponent {
   ngOnDestroy() {}
   ngOnChanges(changes) {}
 }
-/** @nocollapse */
 GreetingComponent.propDecorators = {
   greetingName: [{ type: Input, args: ['name'] }]
 };
@@ -16,6 +15,7 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
     return new GreetingComponent();
   },
   inputs: { greetingName: 'name' },
+  features: [i0.ɵNgOnChangesFeature(GreetingComponent)],
   template: function GreetingComponent_Template(rf, ctx) {
     if (rf & 1) {
       i0.ɵT(0);
@@ -23,7 +23,6 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
     if (rf & 2) {
       i0.ɵt(0, i0.ɵi1('Hello ', ctx.greetingName, '!'));
     }
-  },
-  features: [i0.ɵNgOnChangesFeature(GreetingComponent)]
+  }
 });
 //# sourceMappingURL=greeting.component.js.map

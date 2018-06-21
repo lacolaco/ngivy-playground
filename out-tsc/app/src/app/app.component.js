@@ -11,8 +11,7 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
   },
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵE(0, 'app-greeting', _c0);
-      i0.ɵe();
+      i0.ɵEe(0, 'app-greeting', _c0);
     }
   },
   directives: [i1.GreetingComponent]
