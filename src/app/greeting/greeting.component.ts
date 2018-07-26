@@ -3,18 +3,30 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  EventEmitter
+  OnInit,
+  AfterViewInit
 } from '@angular/core';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-greeting',
-  template: `Hello {{greetingName}}!`
+  template: `<div class="greeting">Hello {{greetingName}}!</div>`,
+  styles: [
+    `
+      .greeting {
+        font-weight: bold;
+      }
+    `
+  ]
 })
-export class GreetingComponent implements OnChanges, OnDestroy {
+export class GreetingComponent
+  implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   @Input('name') greetingName: string;
 
   foo() {}
+
+  ngOnInit() {}
+
+  ngAfterViewInit() {}
 
   ngOnDestroy() {}
 
