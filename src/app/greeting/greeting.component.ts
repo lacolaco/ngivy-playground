@@ -4,12 +4,16 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
-  AfterViewInit
+  AfterViewInit,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef
 } from '@angular/core';
 
 @Component({
   selector: 'app-greeting',
-  template: `<div class="greeting">Hello {{greetingName}}!</div>`,
+  template: `<div class="greeting" #greeting>Hello {{greetingName}}!</div>`,
   styles: [
     `
       .greeting {
@@ -20,7 +24,14 @@ import {
 })
 export class GreetingComponent
   implements OnInit, OnChanges, OnDestroy, AfterViewInit {
-  @Input('name') greetingName: string;
+  @Input('name')
+  greetingName: string;
+
+  @Output()
+  customEvent = new EventEmitter();
+
+  @ViewChild('greeting')
+  greetingRef: ElementRef;
 
   foo() {}
 

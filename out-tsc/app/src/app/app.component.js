@@ -29,20 +29,23 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
     return new (t || AppComponent)();
   },
   features: [i0.ɵPublicFeature],
-  consts: 1,
+  consts: 2,
   vars: 0,
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵelement(0, 'app-greeting', _c0);
+      i0.ɵEC(0);
+      i0.ɵelement(1, 'app-greeting', _c0);
+      i0.ɵeC();
     }
   },
-  directives: [i1.GreetingComponent]
+  directives: [i1.GreetingComponent],
+  animations: []
 });
 AppComponent = __decorate(
   [
     Component({
       selector: 'app-root',
-      template: '<app-greeting name="World"></app-greeting>'
+      templateUrl: 'app.component.html'
     })
   ],
   AppComponent

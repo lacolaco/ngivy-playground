@@ -23,10 +23,21 @@ var __metadata =
     if (typeof Reflect === 'object' && typeof Reflect.metadata === 'function')
       return Reflect.metadata(k, v);
   };
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 import * as i0 from '@angular/core';
-var _c0 = ['greeting', 1, 'greeting', true];
+var _c0 = ['greeting', ''];
+var _c1 = ['greeting', 1, 'greeting', true];
 let GreetingComponent = class GreetingComponent {
+  constructor() {
+    this.customEvent = new EventEmitter();
+  }
   foo() {}
   ngOnInit() {}
   ngAfterViewInit() {}
@@ -40,23 +51,34 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
     return new (t || GreetingComponent)();
   },
   inputs: { greetingName: 'name' },
+  outputs: { customEvent: 'customEvent' },
   features: [i0.ɵPublicFeature, i0.ɵNgOnChangesFeature],
-  consts: 2,
+  viewQuery: function GreetingComponent_Query(rf, ctx) {
+    if (rf & 1) {
+      i0.ɵquery(0, ['greeting'], true);
+    }
+    if (rf & 2) {
+      var _t;
+      i0.ɵqueryRefresh((_t = i0.ɵload(0))) && (ctx.greetingRef = _t.first);
+    }
+  },
+  consts: 4,
   vars: 1,
   template: function GreetingComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵelementStart(0, 'div');
-      i0.ɵelementStyling(_c0);
-      i0.ɵtext(1);
+      i0.ɵelementStart(1, 'div', null, _c0);
+      i0.ɵelementStyling(_c1);
+      i0.ɵtext(3);
       i0.ɵelementEnd();
     }
     if (rf & 2) {
-      i0.ɵtextBinding(1, i0.ɵinterpolation1('Hello ', ctx.greetingName, '!'));
+      i0.ɵtextBinding(3, i0.ɵinterpolation1('Hello ', ctx.greetingName, '!'));
     }
   },
   styles: [
     '.greeting[_ngcontent-%COMP%] {\n        font-weight: bold;\n      }'
-  ]
+  ],
+  animations: []
 });
 __decorate(
   [Input('name'), __metadata('design:type', String)],
@@ -64,11 +86,23 @@ __decorate(
   'greetingName',
   void 0
 );
+__decorate(
+  [Output(), __metadata('design:type', Object)],
+  GreetingComponent.prototype,
+  'customEvent',
+  void 0
+);
+__decorate(
+  [ViewChild('greeting'), __metadata('design:type', ElementRef)],
+  GreetingComponent.prototype,
+  'greetingRef',
+  void 0
+);
 GreetingComponent = __decorate(
   [
     Component({
       selector: 'app-greeting',
-      template: `<div class="greeting">Hello {{greetingName}}!</div>`,
+      template: `<div class="greeting" #greeting>Hello {{greetingName}}!</div>`,
       styles: [
         `
       .greeting {
