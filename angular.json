@@ -2,7 +2,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngv6-ivy": {
+    "ngivy-playground": {
       "root": "",
       "projectType": "application",
       "architect": {
@@ -111,34 +111,7 @@
         }
       }
     },
-    "ngv6-ivy-e2e": {
-      "root": "",
-      "projectType": "application",
-      "cli": {},
-      "schematics": {},
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "ngv6-ivy:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    }
-  },
-  "schematics": {
+    "schematics": {
     "@schematics/angular:class": {
       "spec": false
     },
