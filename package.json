@@ -20,11 +20,12 @@
     "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds",
     "core-js": "^2.4.1",
     "rxjs": "^6.0.0",
+    "tslib": "^1.9.0",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.8.0",
-    "@angular/cli": "^7.0.0",
+    "@angular-devkit/build-angular": "~0.11.0-beta.0",
+    "@angular/cli": "angular/cli-builds",
     "@angular/compiler-cli": "angular/compiler-cli-builds",
     "@angular/language-service": "angular/language-service-builds",
     "typescript": "^3.0.3"
