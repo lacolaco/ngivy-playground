@@ -8,8 +8,8 @@ import {
 } from '@angular/core';
 import * as i0 from '@angular/core';
 const _c0 = ['greeting'];
-const _c1 = ['greeting', ''];
-const _c2 = ['greeting', 1, 'greeting', true];
+const _c1 = [1, 'greeting'];
+const _c2 = ['greeting', ''];
 export class GreetingComponent {
   constructor() {
     this.customEvent = new EventEmitter();
@@ -42,8 +42,7 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
   vars: 1,
   template: function GreetingComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵelementStart(1, 'div', null, _c1);
-      i0.ɵelementStyling(_c2);
+      i0.ɵelementStart(1, 'div', _c1, _c2);
       i0.ɵtext(3);
       i0.ɵelementEnd();
     }

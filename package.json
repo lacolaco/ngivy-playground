@@ -9,7 +9,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngc": "rm -rf out-tsc && ngc -p src/tsconfig.app.json"
+    "ngc": "rm -rf out-tsc && ngc -p src/tsconfig.app.json",
+    "postinstall": "ivy-ngcc"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +25,7 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.11.0-beta.0",
+    "@angular-devkit/build-angular": "next",
     "@angular/cli": "angular/cli-builds",
     "@angular/compiler-cli": "angular/compiler-cli-builds",
     "@angular/language-service": "angular/language-service-builds",

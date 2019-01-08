@@ -22,7 +22,9 @@ SomeService.ngInjectableDef = i0.defineInjectable({
       ]
     }
   ],
-  [],
+  function() {
+    return [];
+  },
   null
 );
 //# sourceMappingURL=some.service.js.map

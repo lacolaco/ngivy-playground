@@ -6,8 +6,9 @@ import { SomeService } from './some.service';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  name = "World";
+  name = 'World';
+
+  items = new Array(5).fill(null).map((_, i) => i + 1);
 
   constructor(private some: SomeService) {}
-
 }
