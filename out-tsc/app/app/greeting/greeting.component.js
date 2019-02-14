@@ -28,26 +28,27 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
   },
   inputs: { greetingName: ['name', 'greetingName'] },
   outputs: { customEvent: 'customEvent' },
-  features: [i0.ɵNgOnChangesFeature],
+  features: [i0.ɵNgOnChangesFeature()],
   viewQuery: function GreetingComponent_Query(rf, ctx) {
     if (rf & 1) {
-      i0.ɵquery(0, _c0, true);
+      i0.ɵviewQuery(_c0, true);
     }
     if (rf & 2) {
       var _t;
-      i0.ɵqueryRefresh((_t = i0.ɵload(0))) && (ctx.greetingRef = _t.first);
+      i0.ɵqueryRefresh((_t = i0.ɵloadViewQuery())) &&
+        (ctx.greetingRef = _t.first);
     }
   },
-  consts: 4,
+  consts: 3,
   vars: 1,
   template: function GreetingComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵelementStart(1, 'div', _c1, _c2);
-      i0.ɵtext(3);
+      i0.ɵelementStart(0, 'div', _c1, _c2);
+      i0.ɵtext(2);
       i0.ɵelementEnd();
     }
     if (rf & 2) {
-      i0.ɵtextBinding(3, i0.ɵinterpolation1('Hello ', ctx.greetingName, '!'));
+      i0.ɵtextBinding(2, i0.ɵinterpolation1('Hello ', ctx.greetingName, '!'));
     }
   },
   styles: [

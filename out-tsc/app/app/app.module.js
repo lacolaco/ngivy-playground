@@ -8,8 +8,7 @@ AppModule.ngModuleDef = i0.ɵdefineNgModule({
   type: AppModule,
   bootstrap: [AppComponent],
   declarations: [AppComponent, GreetingComponent],
-  imports: [BrowserModule],
-  exports: []
+  imports: [BrowserModule]
 });
 AppModule.ngInjectorDef = i0.defineInjector({
   factory: function AppModule_Factory(t) {
