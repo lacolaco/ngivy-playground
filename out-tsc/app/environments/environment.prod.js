@@ -1,4 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
 };
 //# sourceMappingURL=environment.prod.js.map

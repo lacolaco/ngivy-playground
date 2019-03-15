@@ -4,7 +4,7 @@ import {
   Output,
   EventEmitter,
   ViewChild,
-  ElementRef
+  ElementRef,
 } from '@angular/core';
 import * as i0 from '@angular/core';
 const _c0 = ['greeting'];
@@ -31,7 +31,7 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
   features: [i0.ɵNgOnChangesFeature()],
   viewQuery: function GreetingComponent_Query(rf, ctx) {
     if (rf & 1) {
-      i0.ɵviewQuery(_c0, true);
+      i0.ɵviewQuery(_c0, true, null);
     }
     if (rf & 2) {
       var _t;
@@ -48,12 +48,13 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
       i0.ɵelementEnd();
     }
     if (rf & 2) {
+      i0.ɵflushHooksUpTo(2);
       i0.ɵtextBinding(2, i0.ɵinterpolation1('Hello ', ctx.greetingName, '!'));
     }
   },
   styles: [
-    '.greeting[_ngcontent-%COMP%] {\n        font-weight: bold;\n      }'
-  ]
+    '.greeting[_ngcontent-%COMP%] {\n        font-weight: bold;\n      }',
+  ],
 });
 /*@__PURE__*/ i0.ɵsetClassMetadata(
   GreetingComponent,
@@ -69,31 +70,31 @@ GreetingComponent.ngComponentDef = i0.ɵdefineComponent({
       .greeting {
         font-weight: bold;
       }
-    `
-          ]
-        }
-      ]
-    }
+    `,
+          ],
+        },
+      ],
+    },
   ],
   null,
   {
     greetingName: [
       {
         type: Input,
-        args: ['name']
-      }
+        args: ['name'],
+      },
     ],
     customEvent: [
       {
-        type: Output
-      }
+        type: Output,
+      },
     ],
     greetingRef: [
       {
         type: ViewChild,
-        args: ['greeting']
-      }
-    ]
-  }
+        args: ['greeting'],
+      },
+    ],
+  },
 );
 //# sourceMappingURL=greeting.component.js.map

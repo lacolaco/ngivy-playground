@@ -31,7 +31,8 @@
                 "input": "src/styles.css"
               }
             ],
-            "scripts": []
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {

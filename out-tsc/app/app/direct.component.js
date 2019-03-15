@@ -25,6 +25,6 @@ DirectComponent.ngComponentDef = ng.ɵdefineComponent({
         ng.ɵtextBinding(2, '');
       }
     }
-  }
+  },
 });
 //# sourceMappingURL=direct.component.js.map

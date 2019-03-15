@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { DirectComponent } from './direct.component';
 import { SomeService } from './some.service';
 import * as i0 from '@angular/core';
-import * as i1 from './greeting/greeting.component';
-import * as i2 from '@angular/common';
+import * as i1 from './some.service';
+import * as i2 from './greeting/greeting.component';
+import * as i3 from '@angular/common';
 const _c0 = [3, 'name'];
-const _c1 = ['ngFor', '', 3, 'ngForOf'];
+const _c1 = [4, 'ngFor', 'ngForOf'];
 const _c2 = [3, 'ngComponentOutlet'];
 function AppComponent_ng_container_2_Template(rf, ctx) {
   if (rf & 1) {
@@ -17,6 +18,7 @@ function AppComponent_ng_container_2_Template(rf, ctx) {
   }
   if (rf & 2) {
     const item_r1 = ctx.$implicit;
+    i0.ɵflushHooksUpTo(2);
     i0.ɵtextBinding(2, i0.ɵinterpolation1('', item_r1, ''));
   }
 }
@@ -35,7 +37,7 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
   type: AppComponent,
   selectors: [['app-root']],
   factory: function AppComponent_Factory(t) {
-    return new (t || AppComponent)(i0.ɵdirectiveInject(SomeService));
+    return new (t || AppComponent)(i0.ɵdirectiveInject(i1.SomeService));
   },
   consts: 4,
   vars: 3,
@@ -50,22 +52,25 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
         3,
         1,
         'ng-container',
-        _c1
+        _c1,
       );
       i0.ɵelement(3, 'div', _c2);
     }
     if (rf & 2) {
+      i0.ɵflushHooksUpTo(1);
       i0.ɵelementProperty(1, 'name', i0.ɵbind(ctx.name));
+      i0.ɵflushHooksUpTo(2);
       i0.ɵelementProperty(2, 'ngForOf', i0.ɵbind(ctx.items));
+      i0.ɵflushHooksUpTo(3);
       i0.ɵelementProperty(
         3,
         'ngComponentOutlet',
-        i0.ɵbind(ctx.dynamicComponent)
+        i0.ɵbind(ctx.dynamicComponent),
       );
     }
   },
-  directives: [i1.GreetingComponent, i2.NgForOf, i2.NgComponentOutlet],
-  encapsulation: 2
+  directives: [i2.GreetingComponent, i3.NgForOf, i3.NgComponentOutlet],
+  encapsulation: 2,
 });
 /*@__PURE__*/ i0.ɵsetClassMetadata(
   AppComponent,
@@ -75,18 +80,14 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
       args: [
         {
           selector: 'app-root',
-          templateUrl: 'app.component.html'
-        }
-      ]
-    }
+          templateUrl: 'app.component.html',
+        },
+      ],
+    },
   ],
   function() {
-    return [
-      {
-        type: SomeService
-      }
-    ];
+    return [{ type: i1.SomeService }];
   },
-  null
+  null,
 );
 //# sourceMappingURL=app.component.js.map

@@ -14,11 +14,11 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/common": "angular/common-builds",
-    "@angular/compiler": "angular/compiler-builds",
-    "@angular/core": "angular/core-builds",
-    "@angular/platform-browser": "angular/platform-browser-builds",
-    "@angular/platform-browser-dynamic": "angular/platform-browser-dynamic-builds",
+    "@angular/common": "next",
+    "@angular/compiler": "next",
+    "@angular/core": "next",
+    "@angular/platform-browser": "next",
+    "@angular/platform-browser-dynamic": "next",
     "core-js": "^2.4.1",
     "rxjs": "^6.0.0",
     "tslib": "^1.9.0",
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "next",
-    "@angular/cli": "angular/cli-builds",
-    "@angular/compiler-cli": "angular/compiler-cli-builds",
-    "@angular/language-service": "angular/language-service-builds",
+    "@angular/cli": "next",
+    "@angular/compiler-cli": "next",
+    "@angular/language-service": "next",
     "typescript": "^3.0.3"
   }
 }
