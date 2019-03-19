@@ -2,14 +2,14 @@ import {
   Component,
   ComponentFactoryResolver,
   Injector,
-  Type
+  Type,
 } from '@angular/core';
-import { DirectComponent } from './direct.component';
+import DirectComponent from './direct.component';
 import { SomeService } from './some.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
   name = 'World';

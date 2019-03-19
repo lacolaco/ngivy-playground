@@ -1,29 +1,39 @@
 import * as ng from '@angular/core';
+import { html, render, TemplateResult } from 'lit-html';
 
-export class DirectComponent {
-  show = true;
+type LitComponent = {
+  getTemplate(): TemplateResult;
+};
 
-  static ngComponentDef = ng.ɵdefineComponent({
-    type: DirectComponent,
-    selectors: [['app-direct']],
-    factory: t => new (t || DirectComponent)(),
-    consts: 3,
+function createLitNgComponent<T extends LitComponent>(
+  ComponentType: ng.Type<T>,
+  selector: string,
+): ng.Type<T> {
+  (ComponentType as any)['ngComponentDef'] = ng.ɵdefineComponent({
+    type: ComponentType,
+    selectors: [[selector]],
+    factory: t => new (t || ComponentType)(),
+    consts: 1,
     vars: 0,
-    template: (rf, ctx) => {
-      if (rf & ng.ɵRenderFlags.Create) {
-        ng.ɵelementContainerStart(0);
-        ng.ɵelementStart(1, 'div');
-        ng.ɵtext(2);
-        ng.ɵelementEnd();
-        ng.ɵelementContainerEnd();
-      }
-      if (rf & ng.ɵRenderFlags.Update) {
-        if (ctx.show) {
-          ng.ɵtextBinding(2, 'Hello');
-        } else {
-          ng.ɵtextBinding(2, '');
-        }
-      }
-    }
+    template: (_, ctx) => {
+      render(ctx.getTemplate(), ng.ɵgetHostElement(ctx));
+    },
   });
+  return ComponentType;
 }
+
+export class MyComponent implements LitComponent {
+  name: string;
+
+  getTemplate() {
+    return html`
+      <div>${this.name}</div>
+      <input
+        .value=${this.name}
+        @input=${event => (this.name = event.target.value)}
+      />
+    `;
+  }
+}
+
+export default createLitNgComponent(MyComponent, 'my-component');
