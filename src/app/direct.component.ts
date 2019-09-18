@@ -3,25 +3,28 @@ import * as ng from '@angular/core';
 export class DirectComponent {
   show = true;
 
-  static ngComponentDef = ng.ɵdefineComponent({
+  static ngFactoryDef = t => {
+    return new (t || DirectComponent)();
+  };
+  static ngComponentDef = ng.ɵɵdefineComponent({
     type: DirectComponent,
     selectors: [['app-direct']],
-    factory: t => new (t || DirectComponent)(),
     consts: 3,
-    vars: 0,
+    vars: 1,
     template: (rf, ctx) => {
       if (rf & ng.ɵRenderFlags.Create) {
-        ng.ɵelementContainerStart(0);
-        ng.ɵelementStart(1, 'div');
-        ng.ɵtext(2);
-        ng.ɵelementEnd();
-        ng.ɵelementContainerEnd();
+        ng.ɵɵelementContainerStart(0);
+        ng.ɵɵelementStart(1, 'div');
+        ng.ɵɵtext(2);
+        ng.ɵɵelementEnd();
+        ng.ɵɵelementContainerEnd();
       }
       if (rf & ng.ɵRenderFlags.Update) {
+        ng.ɵɵadvance(2);
         if (ctx.show) {
-          ng.ɵtextBinding(2, 'Hello');
+          ng.ɵɵtextInterpolate('Hello');
         } else {
-          ng.ɵtextBinding(2, '');
+          ng.ɵɵtextInterpolate('');
         }
       }
     }

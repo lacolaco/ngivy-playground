@@ -10,16 +10,16 @@ const _c1 = [4, 'ngFor', 'ngForOf'];
 const _c2 = [3, 'ngComponentOutlet'];
 function AppComponent_ng_container_2_Template(rf, ctx) {
   if (rf & 1) {
-    i0.ɵelementContainerStart(0);
-    i0.ɵelementStart(1, 'div');
-    i0.ɵtext(2);
-    i0.ɵelementEnd();
-    i0.ɵelementContainerEnd();
+    i0.ɵɵelementContainerStart(0);
+    i0.ɵɵelementStart(1, 'div');
+    i0.ɵɵtext(2);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementContainerEnd();
   }
   if (rf & 2) {
     const item_r1 = ctx.$implicit;
-    i0.ɵflushHooksUpTo(2);
-    i0.ɵtextBinding(2, i0.ɵinterpolation1('', item_r1, ''));
+    i0.ɵɵadvance(2);
+    i0.ɵɵtextInterpolate(item_r1);
   }
 }
 export class AppComponent {
@@ -33,44 +33,40 @@ export class AppComponent {
     this.dynamicComponent = DirectComponent;
   }
 }
-AppComponent.ngComponentDef = i0.ɵdefineComponent({
+AppComponent.ngFactoryDef = function AppComponent_Factory(t) {
+  return new (t || AppComponent)(i0.ɵɵdirectiveInject(i1.SomeService));
+};
+AppComponent.ngComponentDef = i0.ɵɵdefineComponent({
   type: AppComponent,
   selectors: [['app-root']],
-  factory: function AppComponent_Factory(t) {
-    return new (t || AppComponent)(i0.ɵdirectiveInject(i1.SomeService));
-  },
   consts: 4,
   vars: 3,
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      i0.ɵelementContainerStart(0);
-      i0.ɵelement(1, 'app-greeting', _c0);
-      i0.ɵelementContainerEnd();
-      i0.ɵtemplate(
+      i0.ɵɵelementContainerStart(0);
+      i0.ɵɵelement(1, 'app-greeting', _c0);
+      i0.ɵɵelementContainerEnd();
+      i0.ɵɵtemplate(
         2,
         AppComponent_ng_container_2_Template,
         3,
         1,
         'ng-container',
-        _c1,
+        _c1
       );
-      i0.ɵelement(3, 'div', _c2);
+      i0.ɵɵelement(3, 'div', _c2);
     }
     if (rf & 2) {
-      i0.ɵflushHooksUpTo(1);
-      i0.ɵelementProperty(1, 'name', i0.ɵbind(ctx.name));
-      i0.ɵflushHooksUpTo(2);
-      i0.ɵelementProperty(2, 'ngForOf', i0.ɵbind(ctx.items));
-      i0.ɵflushHooksUpTo(3);
-      i0.ɵelementProperty(
-        3,
-        'ngComponentOutlet',
-        i0.ɵbind(ctx.dynamicComponent),
-      );
+      i0.ɵɵadvance(1);
+      i0.ɵɵproperty('name', ctx.name);
+      i0.ɵɵadvance(1);
+      i0.ɵɵproperty('ngForOf', ctx.items);
+      i0.ɵɵadvance(1);
+      i0.ɵɵproperty('ngComponentOutlet', ctx.dynamicComponent);
     }
   },
   directives: [i2.GreetingComponent, i3.NgForOf, i3.NgComponentOutlet],
-  encapsulation: 2,
+  encapsulation: 2
 });
 /*@__PURE__*/ i0.ɵsetClassMetadata(
   AppComponent,
@@ -80,14 +76,14 @@ AppComponent.ngComponentDef = i0.ɵdefineComponent({
       args: [
         {
           selector: 'app-root',
-          templateUrl: 'app.component.html',
-        },
-      ],
-    },
+          templateUrl: 'app.component.html'
+        }
+      ]
+    }
   ],
   function() {
     return [{ type: i1.SomeService }];
   },
-  null,
+  null
 );
 //# sourceMappingURL=app.component.js.map

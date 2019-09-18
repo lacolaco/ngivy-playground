@@ -13,7 +13,9 @@ import {
 
 @Component({
   selector: 'app-greeting',
-  template: `<div class="greeting" #greeting>Hello {{greetingName}}!</div>`,
+  template: `
+    <div class="greeting" #greeting>Hello {{ greetingName }}!</div>
+  `,
   styles: [
     `
       .greeting {
@@ -30,7 +32,7 @@ export class GreetingComponent
   @Output()
   customEvent = new EventEmitter();
 
-  @ViewChild('greeting')
+  @ViewChild('greeting', { static: true })
   greetingRef: ElementRef;
 
   foo() {}

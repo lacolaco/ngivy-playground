@@ -4,27 +4,30 @@ export class DirectComponent {
     this.show = true;
   }
 }
-DirectComponent.ngComponentDef = ng.ɵdefineComponent({
+DirectComponent.ngFactoryDef = t => {
+  return new (t || DirectComponent)();
+};
+DirectComponent.ngComponentDef = ng.ɵɵdefineComponent({
   type: DirectComponent,
   selectors: [['app-direct']],
-  factory: t => new (t || DirectComponent)(),
   consts: 3,
-  vars: 0,
+  vars: 1,
   template: (rf, ctx) => {
     if (rf & 1 /* Create */) {
-      ng.ɵelementContainerStart(0);
-      ng.ɵelementStart(1, 'div');
-      ng.ɵtext(2);
-      ng.ɵelementEnd();
-      ng.ɵelementContainerEnd();
+      ng.ɵɵelementContainerStart(0);
+      ng.ɵɵelementStart(1, 'div');
+      ng.ɵɵtext(2);
+      ng.ɵɵelementEnd();
+      ng.ɵɵelementContainerEnd();
     }
     if (rf & 2 /* Update */) {
+      ng.ɵɵadvance(2);
       if (ctx.show) {
-        ng.ɵtextBinding(2, 'Hello');
+        ng.ɵɵtextInterpolate('Hello');
       } else {
-        ng.ɵtextBinding(2, '');
+        ng.ɵɵtextInterpolate('');
       }
     }
-  },
+  }
 });
 //# sourceMappingURL=direct.component.js.map

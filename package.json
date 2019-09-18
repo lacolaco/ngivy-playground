@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "rm -rf out-tsc && ngc -p src/tsconfig.app.json",
-    "postinstall": "ivy-ngcc"
+    "postinstall": "ivy-ngcc",
+    "format": "prettier --write './**/*.{ts,js}'"
   },
   "private": true,
   "dependencies": {
@@ -22,13 +23,14 @@
     "core-js": "^2.4.1",
     "rxjs": "^6.0.0",
     "tslib": "^1.9.0",
-    "zone.js": "^0.8.26"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "next",
     "@angular/cli": "next",
     "@angular/compiler-cli": "next",
     "@angular/language-service": "next",
-    "typescript": "^3.0.3"
+    "prettier": "^1.18.2",
+    "typescript": "~3.5.0"
   }
 }
